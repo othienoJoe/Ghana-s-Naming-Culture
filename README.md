@@ -1,0 +1,1 @@
+# Ghana-s-Naming-Culture
