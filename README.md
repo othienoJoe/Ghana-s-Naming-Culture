@@ -7,7 +7,16 @@
 ## Are you interested in Naming cultures in West Africa? Here is Akan Tribe's naming way.It's meant to help you feel the urge in traditional naming,especially,Africa!
 
 # What is in the website;
-## The website has a home page with full completed and in-progress work.It briefly describes the website,validity of one's name in Akan ribe,s culture and the contacts to the owner.
+## The website has a home page with full completed and in-progress work.It briefly describes the website,validity of one's name in Akan Tribe's culture and the contacts to the owner.
+|Please Fill Here            |
+| --------------------------:|
+|           DAY              |
+|============================|
+|          MONTH             |
+|============================|
+|           YEAR             |
+|============================|
+|          Submit            |
 
 # The website has;
 * Contact links
