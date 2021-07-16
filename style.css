@@ -20,6 +20,60 @@ header .header{
 
 /*===================================================*/}
 .container1 {
+        margin: 3em;
+	font-family: sans-serif;
 	display: flex;
-	justify-content: space-between;
+	justify-content: space-evenly
+}
+table {
+	font-size: 100%;
+	display: table;
+	box-sizing: border-box;
+	text-indent: initial;
+	border-spacing: 1px;
+	width: 30em;
+	height: 25em;
+}
+.table {
+	margin-right: 10em;
+	background-color: rgb(231, 216, 197);
+	margin-top: 2em;
+	border: 5px solid black;
+	border-collapse: collapse;
+}
+tbody {
+	padding: 5.5 3;
+}
+.table, th {
+        border: 3px solid black;
+        border-collapse: collapse;
+        padding: 6px;
+}
+.table td span {
+	color: rgb(7, 107, 12);
+}
+.table td i {
+	font-weight: 600;
+}
+.table td {
+	color: rgb(3, 0, 0);
+	border: 2px solid rgb(230, 87, 87);
+        border-collapse: collapse;
+        padding: 6px;
+}
+/*==============================================================*/
+.Naming {
+	font-size: 17px;
+	inline-size: 40em;
+	margin-right: 10em;
+}
+.Naming h3 {
+	text-align: center;
+	font-size: 2em;
+}
+.Naming u {
+	font-style: italic
+}
+.Naming a {
+	color: rgb(17, 0, 255);
 }
