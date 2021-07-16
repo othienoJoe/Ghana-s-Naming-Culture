@@ -79,26 +79,28 @@ tbody {
 }
 /*==================================================*/
 .container {
-	inline-size: 0em;
+	inline-size: 2em;
 	text-align: center;
 	margin-left: 25em;
 }
 #naming {
-	margin-left: 13.3em;
+	margin-left: 11.5em;
 	background-color: antiquewhite;
-	width: 10em;
+	width: 8em;
 	font-size: 2em;
 	font-weight: 500;
 }
 #form {
-	margin-left: 30em;
-	justify-content: space-around;
+	margin-left: 24em;
+	text-align: start;
 }
 #form label {
+	margin-bottom: 2em;
 	font-weight: 800;
 	font-size: 1.3em;
 }
 #form span {
+	margin-top: 2em;
 	font-style: italic;
 	font-weight: 600;
 }
@@ -110,76 +112,90 @@ tbody {
 	font-weight: 700;
 	background-color: crimson;
 	margin-top: 5px;
-	height: 2em;
+	height: 2.5em;
 	border-radius: 20%;
 }
 /*======================================================*/
 footer {
+	margin-top: 15px;
 	display: flex;
 	justify-content: space-evenly;
 	background-color: aqua;
 }
-.social {
-	margin-top: 3em;
+.media {
+	font-size: 1.5em;
 }
-.social a {
+.facebook a {
         color: rgb(33, 19, 241);
-	font-size: 1.5em;
 }
-.social2 a img {
-	margin-top: 25px;
+.twitter a img {
+	margin-top: 5px;
 	border-radius: 10em;
 }
-.social2 a {
+.twitter a {
 	color: rgb(33, 19, 241);
-	font-size: 1.5em;
 }
-.social3 img {
-	margin-top: 20px;
+.email img {
+	margin-top: 5px;
 	border-radius: 10em;
 }
-.social3 a {
+.email a {
 	color: rgb(33, 19, 241);
-	font-size: 1.5em;
 }
-.social4 a {
+.github a {
 	color: rgb(33, 19, 241);
-	font-size: 1.5em;
 }
-.social4 img {
-	margin-top: 25px;
+.github img {
+	margin-top: 5px;
 	border-radius: 10em;
 }
 /*====================================================*/
-.email {
-	margin-bottom: 50px;
+.sub-header {
+	font-size: 1.5em;
 }
-#footer1 {
-	font-size: 2em;
-}
-#form {
+.call {
 	display: flex;
+	justify-content: space-around;
 }
-#form label {
+.call img {
+	margin-top: 10px;
+	border-radius: 40%;
+}
+.call button {
+	margin-left: 2em;
+	background-color: rgba(128, 128, 128, 0.733);
+	margin-top: 10%;
+	font-size: 1.5em;
+	border-radius: 2em;
+}
+.text {
+	display: flex;
+	justify-content: space-between;
+}
+.text img {
+	margin-top: 10px;
+	border-radius: 40%;
+}
+.text button {
+	background-color: rgba(128, 128, 128, 0.733);
+	margin-top: 10%;
+	border-radius: 2em;
 	font-size: 1.5em;
 }
-#form #btn {
-	color: rgb(33, 19, 241);
-	box-shadow: 2px 2px 1px gold;
-	border-radius: 6%;
-	text-align: center;
-	font-size: 30px;
+.whatsapp {
+	display: flex;
+	justify-content: space-around;
 }
-.email span {
+.whatsapp img {
+	margin-top: 10px;
+	border-radius: 40%;
+}
+.whatsapp button {
+	background-color: rgba(104, 91, 91, 0.007);
 	color: red;
+	border-radius: 2em;
+	margin-top: 10%;
 	font-size: 1.5em;
-}
-.alert {
-	text-align: center;
-	padding: 10px;
-	background: greenyellow;
-	color: rgb(90, 38, 38);
-	display: none;
 }
 /*=======================================================*/
 .copyright {

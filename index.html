@@ -113,9 +113,60 @@
 				<fieldset>
                                 <label for="comment">Please fill here :</label><br>
 
-				<span>DAY : </span><input id="name" required type="text"><br>
-				<span>MONTH : </span><input id="age" required type="text"><br>
-				<span>YEAR : </span><input id="name" required type="text"><br>
+				<span><input type="checkbox" name="typ" value="/" checked> DAY : </span>
+				<select id="day" name="day" class="inline-six" onclick="document.cf.typ[1].checked=true">
+					<option value="01">01</option>
+					<option value="02">02</option>
+					<option value="03">03</option>
+				        <option v4lue="04">04</option>
+					<option value="05">05</option>
+					<option v4lue="06">06</option>
+					<option v4lue="07">07</option>
+					<option v4lue="08">08</option>
+					<option value="09">09</option>
+					<option value="10">10</option>
+					<option value="11">11</option>
+					<option value="12">12</option>
+					<option value="13">13</option>
+					<option value="14">14</option>
+					<option value="15">15</option>
+					<option value="16">16</option>
+					<option value="17">17</option>
+					<option value="18">18</option>
+					<option value="19">19</option>
+					<option value="20">20</option>
+					<option value="21">21</option>
+					<option value="22">22</option>
+					<option value="23">23</option>
+					<option value="24">24</option>
+					<option value="25">25</option>
+					<option value="26">26</option>
+					<option value="27">27</option>
+					<option value="28">28</option>
+					<option value="29">29</option>
+					<option value="30">30</option>
+					<option value="31">31</option>
+				</select><br>
+
+                                <span><input type="checkbox" name="typ" value="/" checked> MONTH : </span>
+				<select id="month" name="month" class="inline-six" onchange="document.cf.typ[1].checked=true">
+					<option value="01">January</option>
+					<option value="02">February</option>
+					<option value="03">March</option>
+					<option value="04">April</option>
+					<option value="05">May</option>
+					<option value="06">June</option>
+					<option value="07">July</option>
+					<option value="08">August</option>
+					<option value="09">September</option>
+					<option value="10">October</option>
+					<option value="11">November</option>
+					<option value="12">December</option>
+				</select>
+
+
+				<span><input type="checkbox" name="typ" value="/" checked> YEAR : </span>
+				<input placeholder="YYYY" type="number" autocomplete="off" tad-va="date" onfocus="ifc(this,'y')" pattern="[0-9]*" maxlength="4" size="9" id="boxyear" name="year" title="Enter year as a 4-digit number." class="six" value="/"><br>
                                 
 				<button id="btn" type="submit" onclick="sendMessage()">Submit</button>
 				</fieldset>
@@ -133,21 +184,21 @@
 			<h4>Get In Touch On :</h4>
 		</div>
 		<div class="facebook">
-                        <a href="https://web.facebook.com/"><img src="./Images/facebook logo.png" height="50px"></a>
+                        <a href="https://web.facebook.com/"><img src="./Icons/facebook logo.png" height="50px"></a>
 			<a href="https://web.facebook.com/">Facebook</a>
 	        </div>
 
 	        <div class="twitter">
-		        <a href="https://twitter.com/home"><img src="./Images/twitter.png" height="50px"></a>
+		        <a href="https://twitter.com/home"><img src="./Icons/twitter.png" height="50px"></a>
 			<a href="https://twitter.com/home">Twitter</a>
 	        </div>
 
 	        <div class="email">
-		        <a href="https://mail.google.com/mail/u/0/"><img src="./Images/message.jpg" height="50px"></a>
+		        <a href="https://mail.google.com/mail/u/0/"><img src="./Icons/message.jpg" height="50px"></a>
 			<a href="https://mail.google.com/mail/u/0/">Email</a>
 	        </div>
 		<div class="github">
-		        <a href="https://github.com/"><img src="./Images/git.png" height="50px"></a>
+		        <a href="https://github.com/"><img src="./Icons/git.png" height="50px"></a>
 			<a href="https://mail.google.com/mail/u/0/">Github</a>
 	        </div>
 	</div>
@@ -157,7 +208,7 @@
 		</div>
 		<div class="call">
 			<div>
-		                <a href="#"><img src="./Images/call.jpg" height="50px"></a>
+		                <a href="#"><img src="./Icons/call.jpg" height="50px"></a>
 			</div>
 			<div>
 				<button>(+254) 790 222 530</button>
@@ -165,7 +216,7 @@
 	        </div>
 		<div class="text">
 			<div>
-		                <a href="/"><img src="./Images/message.png" height="50px"></a>
+		                <a href="/"><img src="./Icons/Text.png" height="50px"></a>
 			</div>
 			<div>
 				<button>(+254) 790 222 530</button>
@@ -173,12 +224,15 @@
 	        </div>
 		<div class="whatsapp">
 			<div>
-		                <a href="https://web.whatsapp.com/"><img src="./Images/whatsap.png" height="50px"></a>
+		                <a href="https://web.whatsapp.com/"><img src="./Icons/whatsap.png" height="50px"></a>
 			</div>
 			<div>
 				<button>+254720 835 429</button>
 			</div>
 	        </div>
+	</div>
+	<div class="location">
+		
 	</div>
 </footer>
 <div class="copyright">
