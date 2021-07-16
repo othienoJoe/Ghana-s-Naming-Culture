@@ -78,6 +78,38 @@ tbody {
 	color: rgb(17, 0, 255);
 }
 /*==================================================*/
-.email {
+.container {
+	inline-size: 0em;
 	text-align: center;
+	margin-left: 25em;
+}
+#naming {
+	margin-left: 13.3em;
+	background-color: antiquewhite;
+	width: 10em;
+	font-size: 2em;
+	font-weight: 500;
+}
+#form {
+	margin-left: 30em;
+	justify-content: space-around;
+}
+#form label {
+	font-weight: 800;
+	font-size: 1.3em;
+}
+#form span {
+	font-style: italic;
+	font-weight: 600;
+}
+#form input {
+	padding-top: 15px;
+}
+#form #btn {
+	color: aliceblue;
+	font-weight: 700;
+	background-color: crimson;
+	margin-top: 5px;
+	height: 2em;
+	border-radius: 20%;
 }
