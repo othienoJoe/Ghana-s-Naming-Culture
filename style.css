@@ -113,3 +113,82 @@ tbody {
 	height: 2em;
 	border-radius: 20%;
 }
+/*======================================================*/
+footer {
+	display: flex;
+	justify-content: space-evenly;
+	background-color: aqua;
+}
+.social {
+	margin-top: 3em;
+}
+.social a {
+        color: rgb(33, 19, 241);
+	font-size: 1.5em;
+}
+.social2 a img {
+	margin-top: 25px;
+	border-radius: 10em;
+}
+.social2 a {
+	color: rgb(33, 19, 241);
+	font-size: 1.5em;
+}
+.social3 img {
+	margin-top: 20px;
+	border-radius: 10em;
+}
+.social3 a {
+	color: rgb(33, 19, 241);
+	font-size: 1.5em;
+}
+.social4 a {
+	color: rgb(33, 19, 241);
+	font-size: 1.5em;
+}
+.social4 img {
+	margin-top: 25px;
+	border-radius: 10em;
+}
+/*====================================================*/
+.email {
+	margin-bottom: 50px;
+}
+#footer1 {
+	font-size: 2em;
+}
+#form {
+	display: flex;
+}
+#form label {
+	font-size: 1.5em;
+}
+#form #btn {
+	color: rgb(33, 19, 241);
+	box-shadow: 2px 2px 1px gold;
+	border-radius: 6%;
+	text-align: center;
+	font-size: 30px;
+}
+.email span {
+	color: red;
+	font-size: 1.5em;
+}
+.alert {
+	text-align: center;
+	padding: 10px;
+	background: greenyellow;
+	color: rgb(90, 38, 38);
+	display: none;
+}
+/*=======================================================*/
+.copyright {
+	text-align: center;
+	background-color: aquamarine;
+	height: 2em;
+}
+.copyright span {
+	color: red;
+	font-weight: 1000;
+	font-size: 20px;
+}

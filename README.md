@@ -16,7 +16,7 @@
 |============================|
 |        *YEAR*              |
 |============================|
-|        'Submit'            |
+|        `Submit`            |
 
 # The website has;
 * Contact links
