@@ -21,6 +21,7 @@
 		        <a href="location/index.html"><button class="button button2">LOCATION & CONTACTS</button></a>
 	        </div>
         </div>
+	<div class="time">TIME : <span id="text"></span></div>
 </header>
 <u>_______________________________________________________________________________________________________________________________________________________________________________________________________________________________________________</u>
 <body>
@@ -101,6 +102,26 @@
 
                         <p>Most Ghanaians have at least one name from this system, even if they also have an English or Christian name. Notable figures with day names <br>include Ghana's first president <a href="https://en.wikipedia.org/wiki/Kwame_Nkrumah">Kwame Nkrumah</a> and former <a href="https://en.wikipedia.org/wiki/Secretary-General_of_the_United_Nations">United Nations Secretary-General Kofi Annan</a> .</p>
 		</div>
+	</div>
+	<div class="email">
+                <div id="footer1">
+                        <h4>Naming Form</h4>
+                </div>
+                <div id="form">
+
+                        <form method="post" action="#" onsubmit="return checkforblank()">
+				<fieldset>
+                                <label for="comment">Please fill here :</label><br>
+				<span>DAY : <input id="name" required type="text"></span><br>
+				<span>MONTH : </span><input id="age" required type="text"><br>
+				<span>YEAR : </span><input id="name" required type="text"><br>
+                                
+				<button id="btn" type="submit" onclick="sendMessage()">Submit</button>
+				</fieldset>
+                        </form>
+
+                </div>
+                   
 	</div>
         
 	<script src="home.js"></script>
