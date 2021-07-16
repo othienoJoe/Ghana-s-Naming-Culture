@@ -8,15 +8,15 @@
 
 # What is in the website;
 ## The website has a home page with full completed and in-progress work.It briefly describes the website,validity of one's name in Akan Tribe's culture and the contacts to the owner.
-|Please Fill Here            |
-| --------------------------:|
-|           DAY              |
+|**Please Fill Here**            |
+|:--------------------------:|
+|          *DAY*             |
 |============================|
-|          MONTH             |
+|        *MONTH*             |
 |============================|
-|           YEAR             |
+|        *YEAR*              |
 |============================|
-|          Submit            |
+|        'Submit'            |
 
 # The website has;
 * Contact links
