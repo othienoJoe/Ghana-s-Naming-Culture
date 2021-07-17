@@ -92,10 +92,9 @@ tbody {
 }
 #form {
 	margin-left: 24em;
-	text-align: start;
+	text-align: center;
 }
 #form label {
-	margin-bottom: 2em;
 	font-weight: 800;
 	font-size: 1.3em;
 }
@@ -103,6 +102,14 @@ tbody {
 	margin-top: 2em;
 	font-style: italic;
 	font-weight: 600;
+}
+#form #day {
+	height: 2em;
+	width: 6.4em;
+}
+#form #month {
+	height: 2em;
+	margin-left: 0px;
 }
 #form input {
 	padding-top: 15px;
@@ -196,6 +203,20 @@ footer {
 	border-radius: 2em;
 	margin-top: 10%;
 	font-size: 1.5em;
+}
+/*=======================================================*/
+.location {
+	margin-top: 3em;
+}
+.location button {
+	width: 8.5em;
+	background-color: darkblue;
+	color: whitesmoke;
+	font-size: 17px;
+	font-weight: 600;
+}
+.location a {
+	color: blue;
 }
 /*=======================================================*/
 .copyright {
