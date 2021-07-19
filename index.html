@@ -5,6 +5,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Ghana's Naming Culture</title>
+	<script type="text/javascript" src="http://view.jquery.com/trunk/plugins/validate/jquery.validate.js"></script>
 	<link rel="stylesheet" type="text/css" href="style.css"> 
 	
 </head>
@@ -16,7 +17,7 @@
 	        <div class="about">
 		        <a href="index.html"><button class="button button2">HOME</button></a>
 			<a href="https://en.wikipedia.org/wiki/Akan_names"><button class="button button2">ABOUT AKAN</button></a>
-		        <a href="copyright/index.html"><button class="button button2">COPYRIGHT<span>&trade;</span></button></a>
+		        <a href="#copyright"><button class="button button2">COPYRIGHT<span>&trade;</span></button></a>
 		        <a href=" https://othienojoe.github.io/Nicodemus-Othieno/"><button class="button button2">AUTHOR</button></a>
 		        <a href="footer/index.html"><button class="button button2">LOCATION & CONTACTS</button></a>
 	        </div>
@@ -98,150 +99,163 @@
 			<u><h3>Who Are The Akan(s) ?</h3></u>
 			<p>The <u>Akan People</u>  of <u>Ghana</u> frequently name their children after the day of the week they were born and the order in which they were born.<br> These "day names" have further meanings concerning the soul and character of the person. Middle names have considerably more variety <br>and can refer to their birth order, twin status, or an ancestor's middle name.</p>
 
-                        <p>This naming tradition is shared throughout West Africa and the African diaspora. During the 18th–19th centuries, enslaved people in the Caribbean <br>from the region that is modern-day Ghana were referred to as <a href="https://en.wikipedia.org/wiki/Coromantee">Coromantees</a>. Many of the leaders of enslaved people's rebellions had "day names" including;<br>Cuffy, Cuffee or Kofi, Cudjoe or Kojo, Quao or Quaw, and Quamina or Kwame/Kwamina.</p>
+      <p>This naming tradition is shared throughout West Africa and the African diaspora. During the 18th–19th centuries, enslaved people in the Caribbean <br>from the region that is modern-day Ghana were referred to as <a href="https://en.wikipedia.org/wiki/Coromantee">Coromantees</a>. Many of the leaders of enslaved people's rebellions had "day names" including;<br>Cuffy, Cuffee or Kofi, Cudjoe or Kojo, Quao or Quaw, and Quamina or Kwame/Kwamina.</p>
 
-                        <p>Most Ghanaians have at least one name from this system, even if they also have an English or Christian name. Notable figures with day names <br>include Ghana's first president <a href="https://en.wikipedia.org/wiki/Kwame_Nkrumah">Kwame Nkrumah</a> and former <a href="https://en.wikipedia.org/wiki/Secretary-General_of_the_United_Nations">United Nations Secretary-General Kofi Annan</a> .</p>
+      <p>Most Ghanaians have at least one name from this system, even if they also have an English or Christian name. Notable figures with day names <br>include Ghana's first president <a href="https://en.wikipedia.org/wiki/Kwame_Nkrumah">Kwame Nkrumah</a> and former <a href="https://en.wikipedia.org/wiki/Secretary-General_of_the_United_Nations">United Nations Secretary-General Kofi Annan</a> .</p>
 		</div>
 	</div>
 	<div class="container">
-                <div id="naming">
-                        <h3>Naming Form</h3>
-                </div>
-                <div id="form">
+    <div id="naming">
+      <h3>Name Generating Form</h3>
+    </div>
+    <div id="form">
 
-                        <form method="post" action="#" onsubmit="return checkforblank()">
-				<fieldset>
-                                <label for="comment">Please fill here :</label><br>
+      <form method="post" name="validForm" action="#" onsubmit="validate()">
 
-				<span><input type="checkbox" name="typ" value="/" checked> DAY : </span><br>
-				<select id="day" name="day" class="inline-six" onclick="document.cf.typ[1].checked=true">
-					<option value="01">01</option>
-					<option value="02">02</option>
-					<option value="03">03</option>
-				        <option v4lue="04">04</option>
-					<option value="05">05</option>
-					<option v4lue="06">06</option>
-					<option v4lue="07">07</option>
-					<option v4lue="08">08</option>
-					<option value="09">09</option>
-					<option value="10">10</option>
-					<option value="11">11</option>
-					<option value="12">12</option>
-					<option value="13">13</option>
-					<option value="14">14</option>
-					<option value="15">15</option>
-					<option value="16">16</option>
-					<option value="17">17</option>
-					<option value="18">18</option>
-					<option value="19">19</option>
-					<option value="20">20</option>
-					<option value="21">21</option>
-					<option value="22">22</option>
-					<option value="23">23</option>
-					<option value="24">24</option>
-					<option value="25">25</option>
-					<option value="26">26</option>
-					<option value="27">27</option>
-					<option value="28">28</option>
-					<option value="29">29</option>
-					<option value="30">30</option>
-					<option value="31">31</option>
-				</select><br>
+				<fieldset id="comments">
+          <label for="comment">Fill Your Birth Details Here :</label><br>
 
-                                <span><input type="checkbox" name="typ" value="/" checked> MONTH : </span><br>
-				<select id="month" name="month" class="inline-six" onchange="document.cf.typ[1].checked=true">
-					<option value="01">January</option>
-					<option value="02">February</option>
-					<option value="03">March</option>
-					<option value="04">April</option>
-					<option value="05">May</option>
-					<option value="06">June</option>
-					<option value="07">July</option>
-					<option value="08">August</option>
-					<option value="09">September</option>
-					<option value="10">October</option>
-					<option value="11">November</option>
-					<option value="12">December</option>
-				</select><br>
+				  <span><input type="checkbox" name="typ" value="/"> DAY : </span><br>
+				  <select id="day" name="day" class="inline-six" onclick="document.cf.typ[1].checked=true">
+					  <option value="01">01</option>
+					  <option value="02">02</option>
+					  <option value="03">03</option>
+				    <option v4lue="04">04</option>
+					  <option value="05">05</option>
+				  	<option v4lue="06">06</option>
+					  <option v4lue="07">07</option>
+					  <option v4lue="08">08</option>
+					  <option value="09">09</option>
+					  <option value="10">10</option>
+					  <option value="11">11</option>
+					  <option value="12">12</option>
+					  <option value="13">13</option>
+					  <option value="14">14</option>
+					  <option value="15">15</option>
+					  <option value="16">16</option>
+					  <option value="17">17</option>
+					  <option value="18">18</option>
+					  <option value="19">19</option>
+					  <option value="20">20</option>
+					  <option value="21">21</option>
+					  <option value="22">22</option>
+					  <option value="23">23</option>
+					  <option value="24">24</option>
+					  <option value="25">25</option>
+					  <option value="26">26</option>
+					  <option value="27">27</option>
+					  <option value="28">28</option>
+					  <option value="29">29</option>
+					  <option value="30">30</option>
+					  <option value="31">31</option>
+			  	</select><br>
 
+          <span><input type="checkbox" name="typ" value="/"> MONTH : </span><br>
+				  <select id="month" name="month" class="inline-six" onchange="document.cf.typ[1].checked=true">
+				  	<option value="01">January</option>
+					  <option value="02">February</option>
+					  <option value="03">March</option>
+					  <option value="04">April</option>
+					  <option value="05">May</option>
+					  <option value="06">June</option>
+					  <option value="07">July</option>
+					  <option value="08">August</option>
+					  <option value="09">September</option>
+					  <option value="10">October</option>
+					  <option value="11">November</option>
+					  <option value="12">December</option>
+			  	</select><br>
 
-				<span><input type="checkbox" name="typ" value="/" checked> YEAR : </span>
-				<input placeholder="YYYY" type="number" autocomplete="off" tad-va="date" onfocus="ifc(this,'y')" pattern="[0-9]*" maxlength="4" size="9" id="boxyear" name="year" title="Enter year as a 4-digit number." class="six" value="/"><br>
+				  <span><input type="checkbox" name="typ" value="/"> YEAR : </span><br>
+				  <input placeholder="YYYY" type="number" autocomplete="off" tad-va="date" onfocus="ifc(this,'y')" pattern="[0-9]*" maxlength="4" size="9" id="boxyear" name="year" title="Enter year as a 4-digit number." class="six" value="/" min="1900" max="2022" required><br>
+
+					<div class="gender">
+						<input type="checkbox" id="male" value="male" >Male<br>
+            <input type="checkbox" id="female" value="female">Female<br>
+					</div>
                                 
-				<button id="btn" type="submit" onclick="sendMessage()">Submit</button>
-				</fieldset>
-                        </form>
+				  <button id="btn" type="submit" onclick="">Reveal Name !</button>
+          
+					<div class="error">
+				  	<h3 id="disp" style= "color:green"> </h3>
+            <h4 id="error" style= "color:red"> </h4>
+						<h4 id="error1" style= "color:red"> </h4>
+					</div>
 
-                </div>
+				</fieldset>
+      </form>
+
+    </div>
                    
 	</div>
-        
-	<script src="home.js"></script>
+       
+<script src="home.js"></script>
 </body>
 <footer>
 	<div class="get-me">
 		<div class="media">
-			<h4>Get In Touch On :</h4>
+			<button><input type="checkbox" name="typ" value="/" checked>Get In Touch On :</button>
 		</div>
 		<div class="facebook">
-                        <a href="https://web.facebook.com/"><img src="./Icons/facebook logo.png" height="50px"></a>
+      <a href="https://web.facebook.com/"><img src="./Icons/facebook logo.png" height="50px"></a>
 			<a href="https://web.facebook.com/">Facebook</a>
-	        </div>
+	  </div>
 
-	        <div class="twitter">
-		        <a href="https://twitter.com/home"><img src="./Icons/twitter.png" height="50px"></a>
+	  <div class="twitter">
+		  <a href="https://twitter.com/home"><img src="./Icons/twitter.png" height="50px"></a>
 			<a href="https://twitter.com/home">Twitter</a>
-	        </div>
+	  </div>
 
-	        <div class="email">
-		        <a href="https://mail.google.com/mail/u/0/"><img src="./Icons/message.jpg" height="50px"></a>
+	  <div class="email">
+		  <a href="https://mail.google.com/mail/u/0/"><img src="./Icons/message.jpg" height="50px"></a>
 			<a href="https://mail.google.com/mail/u/0/">Email</a>
-	        </div>
+	  </div>
+
 		<div class="github">
-		        <a href="https://github.com/"><img src="./Icons/git.png" height="50px"></a>
+		  <a href="https://github.com/"><img src="./Icons/git.png" height="50px"></a>
 			<a href="https://mail.google.com/mail/u/0/">Github</a>
-	        </div>
+	  </div>
 	</div>
 	<div class="Phone">
-                <div class="sub-header">
-			<h4>Reach out & Enquire :</h4>
+    <div class="sub-header">
+			<button><input type="checkbox" name="typ" value="/" checked>Reach out & Enquire :</button>
 		</div>
 		<div class="call">
 			<div>
-		                <a href="#"><img src="./Icons/call.jpg" height="50px"></a>
+		    <a href="#"><img src="./Icons/call.jpg" height="50px"></a>
 			</div>
 			<div>
-				<button>(+254) 790 222 530</button>
+				<a href=”tel:+254-790-222-530″><button>+254790 222 530</button></a>
 			</div>
-	        </div>
+	  </div>
 		<div class="text">
 			<div>
-		                <a href="/"><img src="./Icons/Text.png" height="50px"></a>
+		    <a href="/"><img src="./Icons/Text.png" height="50px"></a>
 			</div>
-			<div>
-				<button>(+254) 790 222 530</button>
-			</div>
-	        </div>
+		  <div>
+			<a href=”sms:+254-790-222-530 ?body=[message]″><button>+254790 222 530</button></a>
+		  </div>
+	  </div>
 		<div class="whatsapp">
 			<div>
-		                <a href="https://web.whatsapp.com/"><img src="./Icons/whatsap.png" height="50px"></a>
+		    <a href="https://web.whatsapp.com/"><img src="./Icons/whatsap.png" height="50px"></a>
 			</div>
 			<div>
 				<button>+254720 835 429</button>
 			</div>
-	        </div>
+	  </div>
 	</div>
 	<div class="location">
 		<div>
 			<button><input type="checkbox" name="typ" value="/" checked>Location</button>
 		</div>
 		<div>
-		        <a href="https://www.google.com/maps/d/u/0/edit?mid=1-QUvYL_cB7TjRkBjgwzjxXkvYoso4Rv-&ll=-1.2571280826588662%2C36.845434999999995&z=13"><img src="./Icons/location.jpg" height="35px">Kasarani,Nairobi.</a>
-	        </div>
+		  <a href="https://www.google.com/maps/d/u/0/edit?mid=1-QUvYL_cB7TjRkBjgwzjxXkvYoso4Rv-&ll=-1.2571280826588662%2C36.845434999999995&z=13"><img src="./Icons/location.jpg" height="35px">Kasarani,Nairobi.</a>
+	  </div>
 		
 	</div>
 </footer>
-<div class="copyright">
+<div class="copyright" id="copyright">
 	<h4>Copyright: <span>&copy;</span> 2021 ; All Rights Reserved!</h4>
 </div>
 </html>
