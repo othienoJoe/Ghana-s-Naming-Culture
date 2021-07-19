@@ -37,7 +37,7 @@ function checkforblank () {
 /*==========================================================================*/
 
 function validate() {
-  var genders = document.getElementById('gender');
+  var gender = document.getElementById('gender');
   if(document.validForm.day.value == "") || document.validForm.day.value.length != 2 || document.validForm.day.value > 31 || {
     alert("Please provide a valid birth date!");
     document.validForm.day.focus();
@@ -54,35 +54,6 @@ function validate() {
     return false;
   }
 }
-
-
-
-/*function validate() {
-  var genders = document.getElementById("gender");
-  if(document.validForm.day.value =="") || (document.validForm.day.value) ||
-  document.validForm.day.value.length != 2 {
-  alert( "Please provide a valid birth-date!" );
-  document.validForm.day.focus();
-  return false;
-  }
-  else if(document.validForm.month.value == "") || isNaN(document.validForm.month.value) ||
-  document.validForm.month.value.length != 9 || document.validForm.month.value > 12 || {
-  alert( "Please pick your month of birth!" );
-  return false;
-  }
-  else if(document.validForm.year.value == "") || document.validForm.year.value != 4 || {
-    alert( "Please provide a valid Year of Birth" );
-    document.validForm.year.focus() ;
-    return false;
-  }
-  else if(genders[0].checked==false && genders[1].checked==false) {
-    alert("You MUST select male or female");
-    return false;
-  }
-  else{
-    return true
-  }
-}*/
 
 document.getElementById('btn').addEventListener('submit',submitForm)
 
