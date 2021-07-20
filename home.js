@@ -4,7 +4,13 @@ function getTime(){
 var today=new Date();  
 var h=today.getHours();  
 var m=today.getMinutes();  
-var s=today.getSeconds();  
+var s=today.getSeconds();
+function getDate()
+var date=new Date();
+var day=date.getDate();  
+var month=date.getMonth()+1;  
+var year=date.getFullYear();  
+document.write("<br>Date is: "+day+"/"+month+"/"+year); 
 // add a zero in front of numbers<10  
 m=checkTime(m);  
 s=checkTime(s);  
@@ -20,11 +26,38 @@ return i;
 }  
 /*========================================================================================*/
 var CC, YY, MM, DD, d, dayValue;
-var dayNames = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
-var maleNames = ["Kwesi","Kwadwo","Kwabena","Kwaku","Yaw","Kofi","Kwame"]
-var femaleNames = ["Akosua","Adjoa","Abena","Ekua","Aba","Efua","Amba"]
+var dayNames = ["Sunday","Monday","Tuesday","Wednesday", "Thursday", "Friday","Saturday" ];
+var maleNames = ["Kwasi","Kwadwo","Kwabena","Kwaku","Yaw", "Kofi","Kwame"];
+var femaleNames = ["Akosua","Adwoa","Abenaa","Akua"," Yaa","Afua","Ama"];
 
-var database=firebase.database();
+function validate() {
+  var genders = document.getElementsByName("gender");
+  if( document.myForm.year.value == "" || document.myForm.year.value.length !=4 || document.myForm.year.value >2100 || document.myForm.year.value <=1900) {
+     alert( "Please provide a valid year of birth! eg 2019" );
+     document.myForm.year.focus() ;
+     return false;
+  }
+  else if( document.myForm.month.value == "" || isNaN( document.myForm.month.value ) || 
+  document.myForm.month.value.length != 2 || document.myForm.month.value > 12  || document.myForm.month.value <= 0){
+     alert( "Please provide your month of birth! between 1 and 12" );
+     document.myForm.month.focus() ;
+     return false;
+  }
+  else if( document.myForm.date.value == "" || isNaN( document.myForm.month.value ) || 
+  document.myForm.month.value.length != 2|| document.myForm.date.value > 31 || document.myForm.date.value <= 0) {
+     alert( "Please provide a valid date that you were born in!" );
+     document.myForm.day.focus() ;
+     return false;
+  }
+  else if(genders[0].checked==false && genders[1].checked==false ) {
+      alert("You must select male or female");
+      return false;
+  }   
+  else{
+    return true ;
+  }
+  
+}
 
 function checkforblank () {
 	if (document.getElementById('comments').value == "") {
@@ -34,57 +67,27 @@ function checkforblank () {
 	}
 }
 
-/*==========================================================================*/
-
-function validate() {
-  var gender = document.getElementById('gender');
-  if(document.validForm.day.value == "") || document.validForm.day.value.length != 2 || document.validForm.day.value > 31 || {
-    alert("Please provide a valid birth date!");
-    document.validForm.day.focus();
-    return false;
-  }
-  else if(document.validForm.month.value == "") || isNaN(document.validForm.month.value) || document.validForm.month.length != 9 || document.validForm.month.value > 12 || {
-    alert("Please pick you month of birth!");
-    document.validForm.month.focus();
-    return false;
-  }
-  else if(document.validForm.year.value == "") || document.validForm.year.value > 12 || {
-    alert( "Please provide a valid Year of Birth" );
-    document.validForm.year.focus();
-    return false;
-  }
+function calculateDayValue(){
+  year = document.getElementById("year").value;
+  CC = parseInt(year.substring(0,2));
+  YY = parseInt(year.substring(2,4));
+  MM = parseInt(document.getElementById("month").value);
+  DD = parseInt(document.getElementById("date").value);
+  d = ( ( (CC/4) -2*CC-1) + ( (5*YY/4) ) + ((26*(MM+1)/10) ) + DD)%7;
+  console.log(d);
+  return (Math.floor(d));
 }
 
-document.getElementById('btn').addEventListener('submit',submitForm)
-
-function submitForm(e) {
-  e.preventDefault();
-}
-
-document.querySelector('.alert').getElementsByClassName.display='block';
-
-function hideAlert() {
-  document.querySelector('.alert').getElementsByClassName='alert';
-}
-
-setTimeout(hideAlert,3000);
-/*=====================================================================================*/
-function checkButton() {
-  var getSelectedValue = document.querySelector('input[name="gender"]:checked');
-  var isvalid = checked < 0;
-
-  if(getSelectedValue != null) {
-    document.getElementById("disp").innerHTML
-    = getSelectedValue.value
-    + "Gender is selected"
+function getGender(){
+  var genders = document.getElementsByName("gender");
+  if(genders[0].checked == true){
+    var gender = "male";
   }
-  else {
-    document.getElementById("error").innerHTML
-    = "*You have not selected any gender"
+  else if(genders[1].checked == true){
+    var gender = "female";
   }
-  else {
-    document.getElementById("error1").innerHTML
-    = "*Only one gender"
+  else{
+    return false;
   }
   switch(gender) {
     case "male":
@@ -136,8 +139,58 @@ function checkButton() {
     default:
   }
 }
-/*=====================================================================================*/
-function findName() {
+function findName(){
   dayValue = calculateDayValue();
   getGender();
 }
+/*========================================================================================*
+var CC, YY, MM, DD, d, dayValue;
+var dayNames = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+var maleNames = ["Kwesi","Kwadwo","Kwabena","Kwaku","Yaw","Kofi","Kwame"]
+var femaleNames = ["Akosua","Adjoa","Abena","Ekua","Aba","Efua","Amba"]
+
+// var database=firebase.database();*/
+
+/*==========================================================================*
+
+function validate() {
+  var gender = document.getElementById('gender');
+  if(document.validForm.day.value == "")
+  document.validForm.day.value.length != 2 || document.validForm.day.value > 31 || {
+    alert("Please provide a valid birth date!");
+    document.validForm.day.focus();
+    return false;
+  }
+  else if(document.validForm.month.value == "") isNaN(document.validForm.month.value) ||
+  document.validForm.month.length != 9 || document.validForm.month.value > 12 || {
+    alert("Please pick you month of birth!");
+    document.validForm.month.focus();
+    return false;
+  }
+  else if(document.validForm.year.value == "") || document.validForm.year.value > 12 || {
+    alert( "Please provide a valid Year of Birth" );
+    document.validForm.year.focus();
+    return false;
+  }
+}
+*
+document.getElementById('btn').addEventListener('submit',submitForm)
+
+function submitForm(e) {
+  e.preventDefault();
+}
+
+document.querySelector('.alert').getElementsByClassName.display='block';
+
+function hideAlert() {
+  document.querySelector('.alert').getElementsByClassName='alert';
+}
+
+setTimeout(hideAlert,3000);
+/*=====================================================================================*
+
+/*=====================================================================================*
+function findName() {
+  dayValue = calculateDayValue();
+  getGender();
+}*/

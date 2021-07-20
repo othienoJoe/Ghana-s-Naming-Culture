@@ -19,12 +19,13 @@
 			<a href="https://en.wikipedia.org/wiki/Akan_names"><button class="button button2">ABOUT AKAN</button></a>
 		        <a href="#copyright"><button class="button button2">COPYRIGHT<span>&trade;</span></button></a>
 		        <a href=" https://othienojoe.github.io/Nicodemus-Othieno/"><button class="button button2">AUTHOR</button></a>
-		        <a href="footer/index.html"><button class="button button2">LOCATION & CONTACTS</button></a>
+		        <a href="#location"><button class="button button2">LOCATION & CONTACTS</button></a>
 	        </div>
         </div>
-	<div class="time">TIME : <span id="text"></span></div>
+	<div class="time">DATE & TIME : <span id="text"></span>
+	</div>
 </header>
-<u>_______________________________________________________________________________________________________________________________________________________________________________________________________________________________________________</u>
+<u>____________________________________________________________________________________________________________________________________________________________________________________________________________________________________________</u>
 <body>
         <div class="container1">
                 <table class="table">
@@ -179,16 +180,18 @@
 					<div class="error">
 				  	<h3 id="disp" style= "color:green"> </h3>
             <h4 id="error" style= "color:red"> </h4>
-						<h4 id="error1" style= "color:red"> </h4>
+						<!-- <h4 id="error1" style= "color:red"> </h4> -->
 					</div>
 
 				</fieldset>
       </form>
-
+      <p id="results"> </p>
     </div>
                    
 	</div>
-       
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<!-- <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/jquery.validate.js"></script> -->
 <script src="home.js"></script>
 </body>
 <footer>
@@ -216,7 +219,7 @@
 			<a href="https://mail.google.com/mail/u/0/">Github</a>
 	  </div>
 	</div>
-	<div class="Phone">
+	<div class="Phone" id="contacts">
     <div class="sub-header">
 			<button><input type="checkbox" name="typ" value="/" checked>Reach out & Enquire :</button>
 		</div>
