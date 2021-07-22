@@ -1,29 +1,33 @@
-//Heading time interval
+// Heading time interval
 window.onload=function(){getTime();}  
 function getTime(){  
-var today=new Date();  
-var h=today.getHours();  
-var m=today.getMinutes();  
-var s=today.getSeconds();
-function getDate()
-var date=new Date();
-var day=date.getDate();  
-var month=date.getMonth()+1;  
-var year=date.getFullYear();  
+  var today=new Date();  
+  var h=today.getHours();  
+  var m=today.getMinutes();  
+  var s=today.getSeconds();
+  function getDate(){
+    var date=new Date();
+    var day=date.getDate();  
+    var month=date.getMonth()+1;  
+    var year=date.getFullYear();  
 document.write("<br>Date is: "+day+"/"+month+"/"+year); 
+}
 // add a zero in front of numbers<10  
 m=checkTime(m);  
 s=checkTime(s);  
+
 document.getElementById('text').innerHTML=h+":"+m+":"+s;  
 setTimeout(function(){getTime()},1000);  
-}  
-//setInterval("getTime()",1000);//another way  
+} 
+
+setInterval("getTime()",1000);//another way  
 function checkTime(i){  
 if (i<10){  
   i="0" + i;  
  }  
 return i;  
-}  
+} 
+// } 
 /*========================================================================================*/
 var CC, YY, MM, DD, d, dayValue;
 var dayNames = ["Sunday","Monday","Tuesday","Wednesday", "Thursday", "Friday","Saturday" ];
@@ -32,9 +36,9 @@ var femaleNames = ["Akosua","Adwoa","Abenaa","Akua"," Yaa","Afua","Ama"];
 
 function validate() {
   var genders = document.getElementsByName("gender");
-  if( document.myForm.year.value == "" || document.myForm.year.value.length !=4 || document.myForm.year.value >2100 || document.myForm.year.value <=1900) {
+  if( document.forms.myForm.year.value == "" || document.forms.myForm.year.value.length !=4 || document.forms.myForm.year.value >2100 || document.forms.myForm.year.value <=1900) {
      alert( "Please provide a valid year of birth! eg 2019" );
-     document.myForm.year.focus() ;
+     document.forms.myForm.year.focus();
      return false;
   }
   else if( document.myForm.month.value == "" || isNaN( document.myForm.month.value ) || 
@@ -135,7 +139,7 @@ function getGender(){
       else if(dayValue == -0) {
         alert("Your Akan name is " + femaleNames[6] + "!");
       }
-    break
+    break;
     default:
   }
 }
