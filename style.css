@@ -80,7 +80,7 @@ tbody {
 /*==================================================*/
 .container {
 	inline-size: 2em;
-	text-align: center;
+	text-align: start;
 	margin-left: 24em;
 }
 #naming {
@@ -95,16 +95,20 @@ tbody {
 	margin-left: 24em;
 	text-align: center;
 }
+#form #commenting {
+	color: rgb(250, 8, 8);
+	margin-bottom: 2.5em;
+}
 #form label {
 	font-weight: 800;
 	font-size: 1.3em;
 }
-#form span {
+/*#form span {
 	margin-right: 2em;
 	margin-top: 2em;
 	font-style: italic;
 	font-weight: 600;
-}
+} */
 #form #day {
 	height: 2.5em;
 	width: 6.5em;
@@ -113,12 +117,13 @@ tbody {
 	height: 2.5em;
 	margin-left: 0px;
 }
-#form input {
+/* #form input {
 	width: 6.5em;
 	padding-top: 15px;
-}
+} */
 #form .gender {
 	display: flex;
+	justify-content: space-between;
 }
 #form #btn {
 	width: 10em;
